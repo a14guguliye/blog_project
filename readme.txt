@@ -8,3 +8,5 @@ objective
 7) learning how to configure the static files 
 8) learning how to work with detailView class 
 9) learning how to test the porject 
+10) learning to work with the create view 
+11) learning to work with the update view 
