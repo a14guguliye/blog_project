@@ -12,4 +12,8 @@
         {{ post.body }}
     </p>
 </div>
+
+<a href="{% url 'post_edit' post.id %}">
+    +Edit block post 
+</a>
 {% endblock content %}
