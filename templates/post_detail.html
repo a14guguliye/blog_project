@@ -13,7 +13,16 @@
     </p>
 </div>
 
-<a href="{% url 'post_edit' post.id %}">
-    +Edit block post 
-</a>
+<div>
+    <a href="{% url 'post_edit' post.id %}">
+        +Edit block post 
+    </a>
+</div>
+
+<div>
+    <a href="{% url 'post_delete' post.id %}">
+        +Delete block post
+    </a>
+</div>
+
 {% endblock content %}
