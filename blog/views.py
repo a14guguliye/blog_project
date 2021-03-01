@@ -5,9 +5,11 @@ from django.views.generic.edit import CreateView
 from django.views.generic.edit import UpdateView
 from django.views.generic.edit import DeleteView
 from django.urls import reverse_lazy
-
-
+from django.contrib.auth.forms import UserCreationForm
+from django.views import generic 
 from .models import *
+
+
 # Create your views here.
 class BlogListView(ListView):
     model=Post
@@ -37,3 +39,11 @@ class BlogDeleteView(DeleteView):
     model=Post
     template_name='post_confirm_delete.html' 
     success_url=reverse_lazy('home')
+
+
+
+class SignUpView(generic.CreateView):
+    form_class=UserCreationForm
+    success_url=reverse_lazy('login')
+    template_name='signup.html'
+
